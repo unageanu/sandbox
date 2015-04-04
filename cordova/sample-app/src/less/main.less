@@ -2,28 +2,42 @@
 @import "node_modules/material-ui/src/less/scaffolding.less";
 @import "node_modules/material-ui/src/less/components.less";
 
-body {
+@grid: 8px;
+@app-bar-height: 64px;
+
+html {
   background-color: #F2F2F2;
 }
 
 .content {
+  padding: @app-bar-height+@grid @grid @grid @grid;
+
   .mui-paper {
-    margin: 16px;
     background-color: #FFFFFF;
+    margin-bottom: @grid;
+    transform: rotateY(0deg);
+    transition:
+      transform 0.3s ease-in 0;
 
     .mui-paper-container {
-      min-height: 120px;
+      height: 150px;
     }
 
-    .text-paper {
-      padding: 16px;
+    .text-card {
+      padding: @grid*2;
     }
 
-    .image-paper {
-      height: 280px;
+    .image-card {
+      height: 250px;
       background-image:  url("../img/image.jpg");
       background-position: center top;
       background-size: 100% auto;
     }
+
+    .chart-card {}
+  }
+
+  .mui-paper.back {
+    transform: rotateY(360deg);
   }
 }

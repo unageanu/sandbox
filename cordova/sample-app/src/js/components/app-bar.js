@@ -13,7 +13,7 @@ export default React.createClass({
         return (
             <AppBar
               onMenuIconButtonTouchTap={this.props.onMenuIconTapped}
-              title='サンプル'>
+              title='サンプル' zDepth={1}>
             </AppBar>
         );
     }
